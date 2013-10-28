@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "indtast mappe"
+read var1 
+echo "indtast dage siden modifisering"
+read var2
+
+find $var1 -mtime -$var2 -ls

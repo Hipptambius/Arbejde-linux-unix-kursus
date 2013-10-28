@@ -1,0 +1,58 @@
+#!/bin/bash
+
+echo	"
+	****************************************
+	
+	* 1. Viser indhold af et bibliotek
+	
+	* 2. Viser hvad der staar i en fil
+	
+	* 3. Kopiere en fil
+	
+	* 4. Sletter en fil
+	
+	* 5. aedre navnet paa en fil
+	
+	* 6. Exit tilbage til Linux
+	
+	*
+	
+	* Tast nummeret paa den onskede funktion
+	****************************************"
+read TAST
+case $TAST in
+1)
+echo "indtast komplet sti til bibliotek"
+read bib
+la -l $bib
+;;
+2)
+echo "indtast komplet sti til fil, du gerne vil lase" 
+read FIL
+cat $FIL
+;;
+3)
+echo "indtast komplet sti til filen du gerne vil kopiere"
+read FRA
+echo "indtast komplet sti til hvor filen skal kopieres til"
+read TIL
+cp $FRA $TIL
+;;
+4)
+echo "indtast komplet sti til filen der skal slettes"
+read DEL
+rm -f $DEL
+;;
+5)
+echo "indtast komplet sti til filen der skal omdoebes"
+read OMD
+echo "indtast det nye navn"
+read OMD1
+mv $OMD $OMD1
+;;
+6)
+echo "Lukker scriptet..."
+echo "Tak for denne gang!"
+exit 0
+
+esac

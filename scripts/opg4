@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Hvor skal der søges efter biblioteker"
+read var1
+ls -l $var1 | grep \^d

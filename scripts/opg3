@@ -1,0 +1,8 @@
+#!/bin/bash
+var1=$(who -l | wc -l)
+echo "antal brugere der er på lige nu"
+who -a | wc -l
+echo $var1 "af dem er system brugere"
+echo "antal brugere i /etc/passwd filen"
+wc -l /etc/passwd
+sleep 2
